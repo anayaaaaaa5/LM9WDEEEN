@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weekly Planner</title>
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script> <!-- Make sure the app.js is a module -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    #login-screen, #dashboard {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    section {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2, h3 {
+      margin-top: 0;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="login-screen">
-    <h2>Welcome Bros</h2>
+    <h2>Login</h2>
     <input type="email" id="email" placeholder="Email">
     <input type="password" id="password" placeholder="Password">
     <button onclick="login()">Login</button>
@@ -16,7 +69,7 @@
   </div>
 
   <div id="dashboard" style="display:none;">
-    <h2>Yo, <span id="username"></span> 👊</h2>
+    <h2>Welcome, <span id="username"></span></h2>
     <button onclick="logout()">Logout</button>
 
     <section id="planner-section">
@@ -49,7 +102,5 @@
       <div id="anas-objectives"></div>
     </section>
   </div>
-
-  <script src="app.js"></script>
 </body>
 </html>
