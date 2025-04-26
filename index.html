@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekly Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-screen">
+    <h2>Welcome Bros</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <button onclick="signup()">Sign Up</button>
+  </div>
+
+  <div id="dashboard" style="display:none;">
+    <h2>Yo, <span id="username"></span> 👊</h2>
+    <button onclick="logout()">Logout</button>
+
+    <section id="planner-section">
+      <h3>Your Daily Planner</h3>
+      <div id="planner"></div>
+    </section>
+
+    <section id="todo-section">
+      <h3>To-Do List</h3>
+      <ul id="todo-list"></ul>
+      <input type="text" id="new-task" placeholder="Add task">
+      <button onclick="addTask()">Add</button>
+    </section>
+
+    <section id="objectives-section">
+      <h3>Objectives</h3>
+      <textarea id="objectives" placeholder="Your goals..."></textarea>
+      <button onclick="saveObjectives()">Save Objectives</button>
+    </section>
+
+    <section id="challenges-section">
+      <h3>Shared Challenges</h3>
+      <textarea id="shared-challenges" placeholder="Write your shared challenges..."></textarea>
+      <button onclick="saveChallenges()">Save Challenges</button>
+    </section>
+
+    <section id="view-other">
+      <h3>Anas' Planner & Progress</h3>
+      <div id="anas-planner"></div>
+      <div id="anas-objectives"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
